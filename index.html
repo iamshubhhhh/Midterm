@@ -1,9 +1,152 @@
+<!--Created by Shubh Patel-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shubh Patel</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <style>
+      /* Navbar */
+      header {
+        background-color: #444;
+        color: white;
+        padding: 10px 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Input + Output Section */
+      .input-large {
+        font-size: 1.8rem;
+        min-height: 200px;
+      }
+
+      .output-screen {
+        background-color: #332703;
+        color: #f8d775;
+        font-size: 1.5rem;
+        min-height: 200px;
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #444;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      body {
+        background-color: #1d1f22;
+        color: #dcdcdc;
+      }
+    </style>
   </head>
-  <body></body>
+
+  <body>
+    <!-- Header -->
+    <header class="mb-5 light-gray-header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Left-aligned links container -->
+          <div class="d-flex align-items-center">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
+              target="_blank"
+              class="me-3 text-danger fw-bold"
+              >HTML5</a
+            >
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              target="_blank"
+              class="me-3 text-danger fw-bold"
+              >JavaScript</a
+            >
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
+              class="text-danger fw-bold"
+              >CSS</a
+            >
+          </div>
+
+          <!-- Right-aligned buttons container -->
+          <div class="d-flex align-items-center">
+            <div class="btn-group">
+              <button
+                class="btn btn-secondary btn-sm"
+                data-bs-theme-value="dark"
+              >
+                Dark
+              </button>
+            </div>
+            <div class="btn-group me-2">
+              <button class="btn btn-light btn-sm" data-bs-theme-value="light">
+                Light
+              </button>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm">
+              Contact Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- First row -->
+      <div class="row mb-3">
+        <div class="col-2 d-flex flex-column align-items-start">
+          <p>Factorial calculator.</p>
+          <p>n! = 1x2x3 ... xn.</p>
+          <p>e.g. 5! = 120.</p>
+        </div>
+
+        <div class="col-10 d-flex align-items-center">
+          <input
+            type="number"
+            id="userInput"
+            class="form-control input-large"
+            placeholder="Enter a number"
+          />
+        </div>
+      </div>
+
+      <!-- Second row -->
+      <div class="row">
+        <div class="col-2 d-flex justify-content-end align-items-center">
+          <button class="btn btn-secondary" onclick="calculateFactorial()">
+            Enter
+          </button>
+        </div>
+        <div class="col-10 d-flex align-items-center">
+          <div id="output" class="output-screen p-3 rounded">
+            Output will be displayed here...
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center light-gray-header mt-3">
+      Shubh Patel ©2025
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/darkmodetoggle.js"></script>
+    <script defer src="js/factorial.js"></script>
+  </body>
 </html>
